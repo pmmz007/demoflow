@@ -1,0 +1,9 @@
+name: phonemyintmyat-action-demo
+on: push
+jobs: 
+  myfirst-job:
+    name: my firstjob with github action
+    runs-on: ubuntu-latest
+    steps:
+      # Display the event that triggered the workflow
+      - run: echo "The job was triggered by a ${{ github.event_name }} event."
