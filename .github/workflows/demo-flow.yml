@@ -30,3 +30,11 @@ jobs:
       - name: query information inside files
         run: |
           cat ${{ github.workspace }}/testfile
+      
+      - name: Azure CLI Action (install Azure Cli)
+        uses: Azure/cli@v1
+
+      - name: check CLI version
+        run: |
+          az version
+            
