@@ -27,3 +27,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: query information inside files
+        run: |
+          cat ${{ github.workspace }}/testfile
