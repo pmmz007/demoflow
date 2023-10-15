@@ -31,10 +31,11 @@ jobs:
         run: |
           cat ${{ github.workspace }}/testfile
       
-      - name: Azure CLI Action (install Azure Cli)
-        uses: Azure/cli@v1
+      - name: Setup dotnet on runner
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.x'
 
-      - name: check CLI version
-        run: |
-          az version
+      - name: Display dotnet version
+        run: dotnet --version
             
