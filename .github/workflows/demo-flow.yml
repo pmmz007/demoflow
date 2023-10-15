@@ -23,3 +23,7 @@ jobs:
       - name: conditional step when event name is pull request
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "This event is a pull request"
+
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
